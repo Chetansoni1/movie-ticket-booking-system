@@ -16,8 +16,9 @@
     </div>
 
     <p class="text-gray-400 text-sm text-center mb-3">Scan to Pay</p>
-    <div class="bg-black rounded-xl p-4 flex justify-center mb-6">
-      <img src="{{ url_for('static', filename='images/qr.jpg') }}" alt="QR Code" class="w-56 h-56 object-contain rounded-lg">
+    <div class="bg-white rounded-xl p-4 flex justify-center mb-6">
+      <img src="{{ url_for('static', filename='images/qr.jpg') }}" alt="QR Code" 
+           class="w-64 h-64 object-contain rounded-lg">
     </div>
 
     <form method="POST" action="{{ url_for('confirm_payment') }}">
