@@ -1,5 +1,5 @@
 CREATE DATABASE IF NOT EXISTS movie_booking;
-USE movie_booking;
+USE bnyakr8ckxtqhj5yuojw;
 
 CREATE TABLE IF NOT EXISTS Customer (
   Cust_id INT AUTO_INCREMENT PRIMARY KEY,
