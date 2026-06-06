@@ -12,19 +12,22 @@ A full-stack web application for booking movie tickets online, built with Python
 ## 📸 Screenshots
 
 ### 🏠 Homepage
-![Homepage](screenshots/homepage.png)
+![Homepage](screenshots/Homepage.png)
+
+### 🎥 Movie Detail
+![Movie](screenshots/Movie.png)
 
 ### 🪑 Seat Selection
-![Seat Selection](screenshots/seats.png)
+![Seat Selection](screenshots/Seats.png)
 
 ### 💳 Payment Page
-![Payment](screenshots/payment.png)
+![Payment](screenshots/Payment.png)
 
 ### 🎟️ Booking Confirmation
-![Success](screenshots/success.png)
+![Success](screenshots/Success.png)
 
-### ⚙️ Admin Dashboard
-![Admin](screenshots/admin.png)
+### 📋 My Bookings
+![My Bookings](screenshots/MyBookings.png)
 
 ---
 
