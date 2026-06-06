@@ -31,7 +31,7 @@ A full-stack web application for booking movie tickets online, built with Python
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/MovieTicketBookingSystem.git
+git clone https://github.com/Chetansoni1/MovieTicketBookingSystem.git
 cd MovieTicketBookingSystem
 ```
 
@@ -95,4 +95,4 @@ MovieTicketBookingSystem/
 ```
 
 ## 👤 Author
-Made with ❤️ by [Your Name]
+Made with ❤️ by Chetan Soni
