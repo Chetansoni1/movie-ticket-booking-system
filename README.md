@@ -2,44 +2,74 @@
 
 A full-stack web application for booking movie tickets online, built with Python Flask and MySQL.
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=flat&logo=python)
-![Flask](https://img.shields.io/badge/Flask-2.x-black?style=flat&logo=flask)
-![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=flat&logo=mysql)
-![TailwindCSS](https://img.shields.io/badge/TailwindCSS-2.x-38bdf8?style=flat&logo=tailwindcss)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)](https://python.org)
+[![Flask](https://img.shields.io/badge/Flask-2.x-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql)](https://mysql.com)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-2.x-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+
+---
+
+## 📸 Screenshots
+
+### 🏠 Homepage
+![Homepage](screenshots/homepage.png)
+
+### 🪑 Seat Selection
+![Seat Selection](screenshots/seats.png)
+
+### 💳 Payment Page
+![Payment](screenshots/payment.png)
+
+### 🎟️ Booking Confirmation
+![Success](screenshots/success.png)
+
+### ⚙️ Admin Dashboard
+![Admin](screenshots/admin.png)
+
+---
 
 ## ✨ Features
 
-- 🔐 User Registration & Login with secure password hashing
-- 🎥 Browse movies with Search, Language & Genre filters
-- 🪑 Interactive seat selection with real-time availability
-- 💳 UPI Payment integration with QR code
-- 🎟️ Auto-generated QR ticket after booking confirmation
-- 📋 My Bookings — view all past bookings with QR codes
-- ⚙️ Admin Dashboard — manage movies, view bookings & revenue
+- 🔐 **User Authentication** — Register & login with secure SHA256 password hashing
+- 🎥 **Movie Browsing** — Browse movies with search, language & genre filters
+- 🪑 **Interactive Seat Selection** — Real-time seat availability with Premium & Standard seats
+- 💳 **UPI Payment** — Integrated QR code payment system
+- 🎟️ **QR Ticket Generation** — Auto-generated unique QR ticket after booking
+- 📋 **My Bookings** — View all past bookings with QR codes
+- ⚙️ **Admin Dashboard** — Manage movies, view all bookings & track revenue
+
+---
 
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
 |---|---|
-| Backend | Python, Flask |
+| Backend | Python 3.8+, Flask |
 | Database | MySQL 8.0 |
 | Frontend | HTML5, TailwindCSS, JavaScript |
-| Auth | Session-based + SHA256 hashing |
+| Authentication | Flask Sessions + SHA256 Hashing |
 | QR Code | qrcode + Pillow |
+| Environment | python-dotenv |
+
+---
 
 ## 🚀 Setup Instructions
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/Chetansoni1/MovieTicketBookingSystem.git
-cd MovieTicketBookingSystem
+git clone https://github.com/Chetansoni1/movie-ticket-booking-system.git
+cd movie-ticket-booking-system
 ```
 
 ### 2. Create virtual environment
 ```bash
 python -m venv venv
-venv\Scripts\activate   # Windows
-source venv/bin/activate  # Mac/Linux
+
+# Windows
+venv\Scripts\activate
+
+# Mac/Linux
+source venv/bin/activate
 ```
 
 ### 3. Install dependencies
@@ -48,51 +78,92 @@ pip install -r requirements.txt
 ```
 
 ### 4. Configure environment
-Create a `.env` file:
-```
+Create a `.env` file in the root folder:
+```env
 DB_HOST=localhost
 DB_USER=root
-DB_PASSWORD=your_password
+DB_PASSWORD=your_mysql_password
 DB_NAME=movie_booking
 SECRET_KEY=your_secret_key
 ADMIN_PASSWORD=admin123
 ```
 
-### 5. Setup database
+### 5. Setup the database
 ```bash
 mysql -u root -p
 source path/to/db_setup.sql
 ```
 
-### 6. Run the app
+### 6. Run the application
 ```bash
 python app.py
 ```
-Visit **http://127.0.0.1:5000**
+
+Visit **http://127.0.0.1:5000** 🎉
+
+---
 
 ## 📁 Project Structure
+
 ```
-MovieTicketBookingSystem/
-├── app.py              # Flask routes & logic
-├── config.py           # Database connection
-├── db_setup.sql        # Schema + seed data
-├── requirements.txt    # Dependencies
-├── .env                # Environment variables (not pushed)
+movie-ticket-booking-system/
+├── app.py                  # Flask routes & business logic
+├── config.py               # MySQL database connection
+├── db_setup.sql            # Database schema + seed data
+├── requirements.txt        # Python dependencies
+├── .env                    # Environment variables (not pushed)
+├── .gitignore              # Git ignore rules
 ├── static/
-│   ├── css/
-│   └── images/         # Movie posters + QR codes
-└── templates/
-    ├── base.html
-    ├── index.html
-    ├── login.html
-    ├── register.html
-    ├── movie_detail.html
-    ├── book_ticket.html
-    ├── payment.html
-    ├── success.html
-    ├── my_bookings.html
-    └── admin_dashboard.html
+│   ├── css/styles.css      # Custom styles
+│   └── images/             # Movie posters + generated QR tickets
+├── templates/
+│   ├── base.html           # Base layout with navbar
+│   ├── index.html          # Homepage with search & filters
+│   ├── login.html          # User login page
+│   ├── register.html       # User registration page
+│   ├── movie_detail.html   # Movie details & show selection
+│   ├── book_ticket.html    # Interactive seat selection
+│   ├── payment.html        # UPI QR payment page
+│   ├── success.html        # Booking confirmation + QR ticket
+│   ├── my_bookings.html    # User booking history
+│   ├── admin_login.html    # Admin login page
+│   └── admin_dashboard.html # Admin panel
+└── screenshots/            # Project screenshots for README
 ```
 
+---
+
+## 🔑 Access
+
+| Role | URL | Credentials |
+|---|---|---|
+| User | http://127.0.0.1:5000/register | Register yourself |
+| Admin | http://127.0.0.1:5000/admin | Password: admin123 |
+
+---
+
+## 📌 Pages Overview
+
+| Page | URL |
+|---|---|
+| 🏠 Home | `/` |
+| 🔐 Login | `/login` |
+| 📝 Register | `/register` |
+| 🎥 Movie Detail | `/movie/<id>` |
+| 🪑 Book Tickets | `/book?show_id=<id>` |
+| 📋 My Bookings | `/my_bookings` |
+| ⚙️ Admin Panel | `/admin` |
+
+---
+
 ## 👤 Author
-Made with ❤️ by Chetan Soni
+
+**Chetan Soni**
+
+[![GitHub](https://img.shields.io/badge/GitHub-Chetansoni1-black?style=flat&logo=github)](https://github.com/Chetansoni1)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
