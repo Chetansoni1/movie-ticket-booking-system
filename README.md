@@ -6,6 +6,7 @@ A full-stack web application for booking movie tickets online, built with Python
 [![Flask](https://img.shields.io/badge/Flask-2.x-black?style=for-the-badge&logo=flask)](https://flask.palletsprojects.com)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-orange?style=for-the-badge&logo=mysql)](https://mysql.com)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-2.x-38bdf8?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-green?style=for-the-badge)](https://movie-ticket-booking-system-engm.onrender.com)
 
 ---
 
@@ -102,7 +103,7 @@ source path/to/db_setup.sql
 python app.py
 ```
 
-Visit **http://127.0.0.1:5000** 🎉
+Visit **https://movie-ticket-booking-system-engm.onrender.com** 🎉
 
 ---
 
